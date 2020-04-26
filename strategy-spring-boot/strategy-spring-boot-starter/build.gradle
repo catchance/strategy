@@ -1,0 +1,13 @@
+description = 'strategy-spring-boot-starter'
+
+dependencies {
+    api project(":strategy-spring-boot:strategy-spring-boot-autoconfigure")
+}
+
+jar {
+    manifest {
+        attributes 'Automatic-Module-Name': 'spring.boot.starter'
+    }
+}
+
+

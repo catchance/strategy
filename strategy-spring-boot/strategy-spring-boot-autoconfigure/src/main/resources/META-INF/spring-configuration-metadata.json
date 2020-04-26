@@ -1,0 +1,35 @@
+{
+  "groups": [
+    {
+      "name": "strategy",
+      "description": "策略模式的加载配置",
+      "type": "org.chance.strategy.autoconfigure.StrategyProperties",
+      "sourceType": "org.chance.strategy.autoconfigure.StrategyProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "strategy.lazy",
+      "description": "策略模式是否懒加载.",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.chance.strategy.autoconfigure.StrategyProperties",
+      "defaultValue": false,
+      "deprecated": false
+    }
+  ],
+  "hints": [
+    {
+      "name": "strategy.lazy",
+      "values": [
+        {
+          "value": "true",
+          "description": "启用懒加载，在第一次使用的时候初始化相关策略工厂."
+        },
+        {
+          "value": "false",
+          "description": "不启用懒加载，在spring容器完成初始化的时候就进行策略工厂的初始化."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+// 引入pom文件的方式
+// 1. plugins apply plugin: 'io.spring.dependency-management'
+// 2. api platform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
+plugins {
+    id 'org.springframework.boot' version "${springBootVersion}" apply false
+}
+apply plugin: 'io.spring.dependency-management'
+
+description = 'strategy-core'
+
+// 单独使用Spring Boot的依赖管理
+dependencyManagement {
+    imports {
+        mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+    }
+}
+
+jar {
+    manifest {
+        attributes 'Automatic-Module-Name': 'strategy-core'
+    }
+}
+
+dependencies {
+
+    // import a BOM
+//    api platform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
+
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+

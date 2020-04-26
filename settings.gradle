@@ -1,0 +1,15 @@
+pluginManagement{
+    // pluginManagement {}块只能出现在settings.gradle文件中，该文件必须是文件中的第一个块
+    plugins {
+        // https://github.com/spring-gradle-plugins
+        id 'org.springframework.boot' version "${springBootVersion}"
+    }
+}
+
+rootProject.name = 'strategy'
+
+include ':strategy-core'
+include ':strategy-spring-boot:strategy-spring-boot-autoconfigure'
+include ':strategy-spring-boot:strategy-spring-boot-starter'
+
+include 'samples:strategy-spring-boot-sample'

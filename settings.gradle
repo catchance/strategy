@@ -6,6 +6,9 @@ pluginManagement{
     }
 }
 
+// 使用gradle将maven的pom.xml转换成gradle的build.gradle 
+// gradle init --type pom
+
 rootProject.name = 'strategy'
 
 include ':strategy-core'
